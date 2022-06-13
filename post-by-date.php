@@ -48,9 +48,9 @@ function pbd_register_admin_assets() {
         'pbd_security' => wp_create_nonce( 'pbd-security' )
     ));
 
-    global $current_screen;         
+    global $current_screen;
 
-    if ( isset( $current_screen->id ) && 'pbd-setting' === $current_screen->id ) {
+    if ( isset( $current_screen->id ) && 'toplevel_page_pbd-setting' === $current_screen->id ) {
         wp_enqueue_style('pbd_admin_style');
         wp_enqueue_script('pbd_admin_script');
     }
